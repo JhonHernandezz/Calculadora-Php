@@ -6,47 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
 
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
+   <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <div class="calculadora">
-        <h1>Calculadora exploradora</h1>
+        <h1>Calculadora</h1>
+
+        <div class="datos"></div>
 
         <form method="POST" action="api.php">
-            <button name="boton[]" value="Botón 1">Botón 1</button>
-            <button name="boton[]" value="Botón 2">Botón 2</button>
-            <button name="boton[]" value="Botón 3">Botón 3</button>
-            <button type="submit" name="submit">Mostrar seleccionados</button>
+            <input type="number" name="num1" placeholder="Número 1" required><br><br>
+            <input type="number" name="num2" placeholder="Número 2" required><br><br>
+    
+            <div class="centrado">
+                <select name="operador">
+                    <option value="suma">Suma</option>
+                    <option value="resta">Resta</option>
+                    <option value="multiplicacion">Multiplicación</option>
+                    <option value="division">División</option>
+                </select><br><br>
+            </div>
+    
+            <input type="submit" name="calcular" value="Calcular" class="btnCalculadora">
         </form>
 
-
-
-
-
-
-
-
-
-        <!-- <form action="api.php" method="POST">
-            <input type="submit" value="7" name="siete" class="btnCalculadora">
-            <input type="submit" value="8" name="ocho" class="btnCalculadora">
-            <input type="button" value="9" name="" class="btnCalculadora">
-            <input type="submit" value="%" name="" class="btnCalculadora"><br>
-            <input type="button" value="4" name="" class="btnCalculadora">
-            <input type="button" value="5" name="" class="btnCalculadora">
-            <input type="button" value="6" name="" class="btnCalculadora">
-            <input type="submit" value="x" name="" class="btnCalculadora"><br>
-            <input type="button" value="1" name="" class="btnCalculadora">
-            <input type="button" value="2" name="" class="btnCalculadora">
-            <input type="button" value="3" name="" class="btnCalculadora">
-            <input type="submit" value="-" name="" class="btnCalculadora"><br>
-            <input type="button" value="0" name="" class="btnCalculadora">
-            <input type="button" value="," name="" class="btnCalculadora">
-            <input type="submit" value="%" name="" class="btnCalculadora">
-            <input type="submit" value="+" name="" class="btnCalculadora">
-            <input type="submit" value="=" name="" class="btnCalculadora">
-        </form>  -->
     </div>
 </body>
 </html>
