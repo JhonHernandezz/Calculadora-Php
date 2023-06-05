@@ -1,6 +1,6 @@
 *{
     padding: 0;
-    margin: 0;
+    margin: 0; 
     box-sizing: border-box;
 }
 
@@ -9,28 +9,23 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.calculadora {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-color: black;
 }
 
 .contenedorSuperior{
     justify-content: center;
     text-align: center;
     width: 100%;
-    height: 400px;
+    height: 300px;
 }
 
 .contenedorSuperior h1{
     position: relative;
-    margin-top: 10%;
+    margin-top: 140px;
     font-size: 500%;
     color: rgb(167, 158, 158);
     box-shadow: 10px 10px 10px rgb(156, 68, 68);
+    text-shadow: 5px 5px 1px rgb(248, 0, 0);
     font-family: 'Chokokutai', cursive;
 }
 
@@ -38,33 +33,82 @@ body{
     content: "CALCULADORA";
     position: absolute;
     left: 51%;
-    color: rgb(12, 4, 4);
+    color: rgb(0, 17, 255);
     top: 10px;
     transform: translateX(-50%);
 }
 
-.centrado{
-    left: 50%;
-    width: 100%;
-    height: 22px;
+.calculadora {
+    box-shadow: -10px 10px 20px rgb(255, 255, 255),
+                10px -10px 20px rgb(255, 255, 255);
+    border-radius: 2px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-bottom: 20px;
+    align-items: center;
+    width: 400px;
 }
 
-.calculadora form input{
-    width: 100%;
-    padding: 2px;
+.calculadora form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.btnCalculadora{
-    padding: 5px;
-    width: 140px;
-    font-size: 20px;
-    margin: 5px;
+.calculadora input[type="number"]{
+    width: 70%;
+    font-size: 100%;
+    padding: 8px 0px;
+    border-radius: 2px;
     border: none;
-    box-shadow: 3px 3px 1px rgba(0, 0, 0, .6);
+    outline: none;
+    margin: 20px 0px 20px 0px;
+    text-align: center;
+    box-shadow: 8px 8px 10px rgb(0, 17, 255);
+}
+
+.calculadora input[type="number"]:hover{
+    transition: 1s all ease;
+    box-shadow: 0px 0px 10px rgb(0, 17, 255),
+                -8px -8px 10px rgb(0, 17, 255);
+}
+
+.calculadora select{
+    width: 70%;
+    font-size: 100%;
+    padding: 8px 0px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    margin: 20px 0px 40px 0px;
+    text-align: center;
+    box-shadow: 8px 8px 10px rgb(255, 0, 0);
+}
+
+.calculadora select:hover{
+    transition: 1s all ease;
+    box-shadow: 0px 0px 10px rgb(255, 0, 0),
+                -8px -8px 10px rgb(255, 0, 0);
+}
+
+.calculadora input[type="submit"]{
+    width: 60%;
+    font-size: 100%;
+    padding: 8px 0px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    margin: 0px 0px 40px 0px;
+    text-align: center;
     cursor: pointer;
+    box-shadow: 8px 8px 10px rgb(255, 255, 255);
+}
+
+.calculadora input[type="submit"]:hover{
+    transition: 1s all ease;
+    box-shadow: 0px 0px 10px rgb(255, 255, 255),
+                -8px -8px 10px rgb(255, 255, 255);
 }
 
 input[type=number]::-webkit-inner-spin-button, 
@@ -73,4 +117,50 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; 
 }
 
-input[type=number] { -moz-appearance:textfield; }
+@media (max-width: 1150px) {
+    .calculadora{
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .contenedorSuperior h1{
+        font-size: 400%;
+    }
+
+    .calculadora{
+        width: 300px;
+    }
+}
+
+@media (max-width: 523px) {
+    .contenedorSuperior h1{
+        font-size: 300%;
+    }
+}
+
+@media (max-width: 393px) {
+    .contenedorSuperior h1{
+        font-size: 240%;
+    }
+
+    .calculadora{
+        width: 80%;
+    }
+}
+
+@media (max-width: 306px) {
+    .contenedorSuperior h1{
+        font-size: 150%;
+    }
+
+    .contenedorSuperior h1::after{
+        content: "";
+        
+    }
+
+    .calculadora{
+        width: 80%;
+    }
+}
